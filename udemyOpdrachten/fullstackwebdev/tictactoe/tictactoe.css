@@ -1,0 +1,22 @@
+table{
+      margin: auto;
+}
+
+td{
+  border: solid black 3px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 63px;
+  font-weight: bold;
+}
+
+#score{
+  margin: auto;
+  text-align: center;
+}
+
+img{
+  height: 10%;
+  width: 10%;
+}
