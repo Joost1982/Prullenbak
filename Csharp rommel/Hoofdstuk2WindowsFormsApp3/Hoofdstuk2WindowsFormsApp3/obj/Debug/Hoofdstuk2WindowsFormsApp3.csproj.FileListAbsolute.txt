@@ -1,0 +1,10 @@
+C:\Users\j.vd.horst\source\repos\Hoofdstuk2WindowsFormsApp3\Hoofdstuk2WindowsFormsApp3\obj\Debug\Hoofdstuk2WindowsFormsApp3.csprojAssemblyReference.cache
+C:\Users\j.vd.horst\source\repos\Hoofdstuk2WindowsFormsApp3\Hoofdstuk2WindowsFormsApp3\obj\Debug\Hoofdstuk2WindowsFormsApp3.Form1.resources
+C:\Users\j.vd.horst\source\repos\Hoofdstuk2WindowsFormsApp3\Hoofdstuk2WindowsFormsApp3\obj\Debug\Hoofdstuk2WindowsFormsApp3.Properties.Resources.resources
+C:\Users\j.vd.horst\source\repos\Hoofdstuk2WindowsFormsApp3\Hoofdstuk2WindowsFormsApp3\obj\Debug\Hoofdstuk2WindowsFormsApp3.csproj.GenerateResource.cache
+C:\Users\j.vd.horst\source\repos\Hoofdstuk2WindowsFormsApp3\Hoofdstuk2WindowsFormsApp3\obj\Debug\Hoofdstuk2WindowsFormsApp3.csproj.CoreCompileInputs.cache
+C:\Users\j.vd.horst\source\repos\Hoofdstuk2WindowsFormsApp3\Hoofdstuk2WindowsFormsApp3\bin\Debug\Hoofdstuk2WindowsFormsApp3.exe.config
+C:\Users\j.vd.horst\source\repos\Hoofdstuk2WindowsFormsApp3\Hoofdstuk2WindowsFormsApp3\bin\Debug\Hoofdstuk2WindowsFormsApp3.exe
+C:\Users\j.vd.horst\source\repos\Hoofdstuk2WindowsFormsApp3\Hoofdstuk2WindowsFormsApp3\bin\Debug\Hoofdstuk2WindowsFormsApp3.pdb
+C:\Users\j.vd.horst\source\repos\Hoofdstuk2WindowsFormsApp3\Hoofdstuk2WindowsFormsApp3\obj\Debug\Hoofdstuk2WindowsFormsApp3.exe
+C:\Users\j.vd.horst\source\repos\Hoofdstuk2WindowsFormsApp3\Hoofdstuk2WindowsFormsApp3\obj\Debug\Hoofdstuk2WindowsFormsApp3.pdb

@@ -1,0 +1,7 @@
+C:\Users\j.vd.horst\source\repos\Save_the_humans\Save_the_humans\obj\x86\Debug\Save_the_humans.csprojAssemblyReference.cache
+C:\Users\j.vd.horst\source\repos\Save_the_humans\Save_the_humans\obj\x86\Debug\App.g.i.cs
+C:\Users\j.vd.horst\source\repos\Save_the_humans\Save_the_humans\obj\x86\Debug\App.g.cs
+C:\Users\j.vd.horst\source\repos\Save_the_humans\Save_the_humans\obj\x86\Debug\App.xaml
+C:\Users\j.vd.horst\source\repos\Save_the_humans\Save_the_humans\obj\x86\Debug\MainPage.xaml
+C:\Users\j.vd.horst\source\repos\Save_the_humans\Save_the_humans\obj\x86\Debug\App.xbf
+C:\Users\j.vd.horst\source\repos\Save_the_humans\Save_the_humans\obj\x86\Debug\MainPage.xbf

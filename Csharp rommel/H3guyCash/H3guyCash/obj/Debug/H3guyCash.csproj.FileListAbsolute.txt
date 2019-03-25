@@ -1,0 +1,10 @@
+C:\Users\j.vd.horst\source\repos\H3guyCash\H3guyCash\bin\Debug\H3guyCash.exe.config
+C:\Users\j.vd.horst\source\repos\H3guyCash\H3guyCash\bin\Debug\H3guyCash.exe
+C:\Users\j.vd.horst\source\repos\H3guyCash\H3guyCash\bin\Debug\H3guyCash.pdb
+C:\Users\j.vd.horst\source\repos\H3guyCash\H3guyCash\obj\Debug\H3guyCash.csprojAssemblyReference.cache
+C:\Users\j.vd.horst\source\repos\H3guyCash\H3guyCash\obj\Debug\H3guyCash.Form1.resources
+C:\Users\j.vd.horst\source\repos\H3guyCash\H3guyCash\obj\Debug\H3guyCash.Properties.Resources.resources
+C:\Users\j.vd.horst\source\repos\H3guyCash\H3guyCash\obj\Debug\H3guyCash.csproj.GenerateResource.cache
+C:\Users\j.vd.horst\source\repos\H3guyCash\H3guyCash\obj\Debug\H3guyCash.csproj.CoreCompileInputs.cache
+C:\Users\j.vd.horst\source\repos\H3guyCash\H3guyCash\obj\Debug\H3guyCash.exe
+C:\Users\j.vd.horst\source\repos\H3guyCash\H3guyCash\obj\Debug\H3guyCash.pdb

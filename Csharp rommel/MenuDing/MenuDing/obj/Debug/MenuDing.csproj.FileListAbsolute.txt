@@ -1,0 +1,10 @@
+C:\Users\j.vd.horst\source\repos\MenuDing\MenuDing\bin\Debug\MenuDing.exe.config
+C:\Users\j.vd.horst\source\repos\MenuDing\MenuDing\bin\Debug\MenuDing.exe
+C:\Users\j.vd.horst\source\repos\MenuDing\MenuDing\bin\Debug\MenuDing.pdb
+C:\Users\j.vd.horst\source\repos\MenuDing\MenuDing\obj\Debug\MenuDing.csprojAssemblyReference.cache
+C:\Users\j.vd.horst\source\repos\MenuDing\MenuDing\obj\Debug\MenuDing.Form1.resources
+C:\Users\j.vd.horst\source\repos\MenuDing\MenuDing\obj\Debug\MenuDing.Properties.Resources.resources
+C:\Users\j.vd.horst\source\repos\MenuDing\MenuDing\obj\Debug\MenuDing.csproj.GenerateResource.cache
+C:\Users\j.vd.horst\source\repos\MenuDing\MenuDing\obj\Debug\MenuDing.csproj.CoreCompileInputs.cache
+C:\Users\j.vd.horst\source\repos\MenuDing\MenuDing\obj\Debug\MenuDing.exe
+C:\Users\j.vd.horst\source\repos\MenuDing\MenuDing\obj\Debug\MenuDing.pdb
