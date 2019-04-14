@@ -1,0 +1,29 @@
+# run dit script in tmux om onderstaand venster / pane layout te krijgen
+
+#*************************************
+#*                     *             *
+#*                     *             *
+#*                     *      1      *
+#*       0             *             *
+#*                     ***************
+#*                     *             *
+#*                     *      2      *
+#*                     *             *
+#*                     *             *
+#*************************************
+
+
+tmux new-session -d
+
+#split venster 0 in 2'n horizontaal (links <-> rechts) waarbij rechts 33% van het scherm is
+tmux split-window -d -t 0 -h -p 33   
+
+#split  venster 1 in 2'n verticaal (boven <-> onder)
+tmux split-window -d -t 1 -v   
+
+
+#start vim in venster 0
+tmux send-keys -t 0 'vim' enter C-l
+
+#start python in venster2
+#tmux send-keys -t 2 'python3' enter C-l
