@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OlifantApp", "OlifantApp\OlifantApp.csproj", "{16ED33C7-E5FF-443D-8AAF-74B0CFE4AF5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16ED33C7-E5FF-443D-8AAF-74B0CFE4AF5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16ED33C7-E5FF-443D-8AAF-74B0CFE4AF5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16ED33C7-E5FF-443D-8AAF-74B0CFE4AF5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16ED33C7-E5FF-443D-8AAF-74B0CFE4AF5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F2916AF-8EC3-4E00-A58C-803BD17C0372}
+	EndGlobalSection
+EndGlobal
