@@ -126,7 +126,79 @@ namespace ConsoleApp1
             //    index++;
             //} while (index <= 5);
 
-            Raadwoord();
+            //Raadwoord();
+
+            ////// 2 dimensional array [3 t/m x dimensional is extra ',' toevoegen
+            //int[,] numberGrid =
+            //{
+            //    {1,2 },
+            //    {2,23 },
+            //    {3,8}
+            //};
+            //Console.WriteLine(numberGrid[2,0]); // = 3
+            //Console.WriteLine(numberGrid[1,1]); // = 23
+
+
+            //// error handling
+            //// alles in try en catch blokken stoppen. De code die kan vastlopen
+            //// stop je in de try{} en in de catch{} zet je wat die moet doen bij een vastloper
+
+
+            //try {
+            //    Console.WriteLine("enter a number:");
+            //    int num1 = Convert.ToInt32(Console.ReadLine());
+            //    Console.WriteLine("enter a number:");
+            //    int num2 = Convert.ToInt32(Console.ReadLine());
+            //
+            //    Console.WriteLine(num1 / num2);
+            // }
+
+            //catch {
+            //    Console.WriteLine("Fout!");
+            //        }
+
+            //of met de foutmelding erbij:
+            //catch(Exception e) {
+            //    Console.WriteLine("Fout: " + e );
+            //        }
+
+
+
+
+            //of met verschillende acties per fout
+            //catch(DivideByZeroException e) {
+            //    Console.WriteLine("Fout; je kan niet delen door 0: " + e);
+            //        }
+            //          
+            //catch(FormatException e) {
+            //    Console.WriteLine("Fout; verkeerde invoer: " + e);
+            //        }
+
+
+            //finally
+            //{
+            //    // alle code hierin wordt altijd uitgevoerd
+            //    // maar dit is optional
+            //}
+
+
+
+            //Book boek1 = new Book() { Titel = "Bijbel" , Auteur="Piet", Paginas=100};
+
+            Console.WriteLine(Book.bookCount);
+            Book boek1 = new Book("Bijbel", "Piet", 100);
+            Console.WriteLine(Book.bookCount);
+
+            //boek1.Titel = "Boe"; // dit kan nu niet doordat de setter private is
+
+            //Console.WriteLine(boek1.Titel);
+            //Console.WriteLine(boek1.Paginas);
+
+            Student student1 = new Student("Jim", "Business", 2.8);
+            Student student2 = new Student("Pam", "Art", 3.6);
+
+            Console.WriteLine(student1.Honour());
+
 
 
             ///////// omdat het scherm anders meteen sluit
@@ -226,6 +298,21 @@ namespace ConsoleApp1
 
             return dag;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         static void Raadwoord()
         {
