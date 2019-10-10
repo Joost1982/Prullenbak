@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundBoardv1", "SoundBoardv1\SoundBoardv1.csproj", "{8F4160DA-F36E-4FDC-8977-C77EE5B767DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F4160DA-F36E-4FDC-8977-C77EE5B767DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F4160DA-F36E-4FDC-8977-C77EE5B767DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F4160DA-F36E-4FDC-8977-C77EE5B767DB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8F4160DA-F36E-4FDC-8977-C77EE5B767DB}.Debug|x64.ActiveCfg = Debug|x64
+		{8F4160DA-F36E-4FDC-8977-C77EE5B767DB}.Debug|x64.Build.0 = Debug|x64
+		{8F4160DA-F36E-4FDC-8977-C77EE5B767DB}.Debug|x64.Deploy.0 = Debug|x64
+		{8F4160DA-F36E-4FDC-8977-C77EE5B767DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F4160DA-F36E-4FDC-8977-C77EE5B767DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F4160DA-F36E-4FDC-8977-C77EE5B767DB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8F4160DA-F36E-4FDC-8977-C77EE5B767DB}.Release|x64.ActiveCfg = Release|x64
+		{8F4160DA-F36E-4FDC-8977-C77EE5B767DB}.Release|x64.Build.0 = Release|x64
+		{8F4160DA-F36E-4FDC-8977-C77EE5B767DB}.Release|x64.Deploy.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8D2D706-D60B-45B6-AD4B-72253AF91E2A}
+	EndGlobalSection
+EndGlobal
