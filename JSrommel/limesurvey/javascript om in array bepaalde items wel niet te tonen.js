@@ -2,6 +2,10 @@
 
 //voorliggend script toont items wel of niet in een array gebaseerd op de scores van een voorgaande array.
 //alleen de twee items met de hoogste score worden getoond (van de in totaal vier items
+//
+//werkwijze: 
+//maak een vragenlijst in limesurvey met 2 array-vragen (zelfde aantal items, dubbele / enkele schaal verschil maakt niet uit)
+//zet voorliggende script in de source van de tweede array-vraag.
 
 
 $(document).ready ( function(){ //pas runnen als complete pagina is geladen
