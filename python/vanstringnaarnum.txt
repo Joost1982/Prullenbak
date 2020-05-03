@@ -1,0 +1,111 @@
+/* Stringvar naar numvar convert (Versie 0.5) - zonder autorecode functie van SPSS - incl label_op_spatie_afbreekcorrectie - variabelen op volgorde houden - correctie voor start A2, of missende Ax */
+
+/* In LimeSurvey krijgen de antwoordopties automatisch een 'A' prefix (e.g. A1, A2, A3 etc.), terwijl je meestal alleen numerieke waarden wilt hebben. */
+/* Hieronder een dirty fix om dit te herstellen (beste is natuurlijk om het in LimeSurvey meteen goed te doen). */
+/* copy/paste dit in de inleessyntax of voeg het toe in de code van LimeSurvey zelf: "./application/controllers/admin/export.php" zodat het er standaard bij komt te staan  */
+
+begin program.
+import spss, spssaux, collections
+sDict = spssaux.VariableDict()
+
+varlijst = []          # lijstje maken voor de foutieve stringsvars, nodig om later te verwijderen
+foutelabellist = []   # lijstje voor labels die spss verkeerd afbreekt (op een spatie) waardoor een codec probleem ontstaat
+
+#### loop door alle variabelen uit de dataset
+for var in sDict:
+    valLabs = var.ValueLabels
+    #print 'Valuelabels bij variabele {0}:\n {1}'.format(var, valLabs)
+
+    #alleen variable label laten staan welke bij variabele hoort (datgene tussen [..])
+    #pos = var.VariableLabel.find(']')
+    #if pos > 0:
+    #    var.VariableLabel = var.VariableLabel[1:pos]
+
+    ### fix voor: UnicodeDecodeError: 'utf8' codec can't decode byte 0xc2 in position 255: unexpected end of data
+    ### error onstaat als spss  <?> van een lang label maakt; volgens mij als die hem afbreekt bij 256 characters en dat precies een spatie is
+    try:
+        print(var.VariableLabel)
+    except UnicodeDecodeError:   #bij een verkeerd omgezet label, zelf label invoegen, var toevoegen aan list die op einde getoond wordt zodat gebruiker die handmatig kan veranderen
+        var.VariableLabel='checklabel!'
+        foutelabellist.append(str(var))
+    #### Als 'A1' gevonden wordt, doe dan magic
+    if 'A1' in valLabs or 'A2' in valLabs or 'A3' in valLabs:
+        print '- Stringvar gevonden die eigenlijk numeriek moet zijn!'
+        print '    Var: {0}'.format(var)
+	#### copy "oude" var in een tempvar
+        print '    - Maak tempvar.'
+        maaktempvar1 = 'string {0}temp(A250).'.format(var)
+        maaktempvar2 = 'compute {0}temp = {0}.'.format(var)
+        spss.Submit(maaktempvar1) 
+        spss.Submit(maaktempvar2) 
+        print '    Tempvar: {0}temp'.format(var)
+
+        #### verzamel de value labels en values van originele string var
+        print '    - Value labels verzamelen van originele string var.'
+        labeltjes = []
+        valuetjes = []
+        i = 1
+        gesortvalLabs = collections.OrderedDict(sorted(valLabs.items()))
+        for key,val in gesortvalLabs.iteritems():
+            labeltjes.append("{0} '{1}'".format(i, val))
+            valuetjes.append(key)
+            i+= 1
+        labels = '\n'.join(labeltjes)
+
+        #alter type van originele stringvar (kan hier pas, anders verdwijnen de value labels)
+        print '    - Alter type van originele string var.'
+        altertype = "alter type {0}(F10.0).".format(var)
+        spss.Submit(altertype)		
+        ## voeg value labels toe
+        maakvaluelabel = "value labels {0} {1}.".format(var, labels)
+        spss.Submit(maakvaluelabel)
+        spss.Submit('exe.')
+        print '    Valuelabels: {0}'.format(labels)
+        #### hercodeer de stringwaarden (die in temp kopie zitten) naar de numwaarden
+
+        print '    - Ax waarden van string recoden naar x voor numerieke var'
+
+        #dit gaat mis wanneer de values beginnen met A2..of als er ergens een Ax mist [e.g. A1, A2, A4, A5, A6]
+        #for i in range(1,len(valLabs)+1):
+        #   codeer = "if ({0}temp = 'A{1}') {0} = {1}.".format(var,i)
+        #    spss.Submit(codeer)
+        #    print '    A{0} wordt: {0}'.format(i)
+        
+        #values op volgorde zetten zonder de 'A' (anders krijg je A1, A10, A2, A3.. etc. ]
+        valuetjesnum = [int(x[1:]) for x in valuetjes]
+        sortedvaluetjesnum = sorted(valuetjesnum)
+        
+        for i, x in enumerate(sortedvaluetjesnum):
+            codeer = "if ({0}temp = 'A{1}') {0} = {2}.".format(var,x, i+1)
+            spss.Submit(codeer)
+            print '    A{0} wordt: {1}'.format(x, i+1)
+
+        #### check: crosstab van stringvar met de nieuwe numvar
+        crosstabje = '''CTABLES
+                           /VLABELS VARIABLES={0}temp {0} DISPLAY=BOTH
+                          /TABLE {0}temp [C][COUNT F40.0] BY {0} [C]
+                           /CATEGORIES VARIABLES={0}temp {0} ORDER=A KEY=VALUE EMPTY=INCLUDE.'''.format(var)
+        spss.Submit(crosstabje)
+        spss.Submit('exe.')	
+	
+        varlijst.append(str(var)+'temp')      # toevoegen aan lijst met vars ivm later verwijderen en hernoemen
+
+#### verwijder "foute" stringvars
+verwijder = 'delete variables {0}.'.format(' '.join(varlijst))
+print verwijder
+spss.Submit(verwijder)
+spss.Submit('exe.')	
+
+#hoeft denk ik niet meer
+#### hernoem numvars
+#numvarlijst = [x+'num' for x in varlijst]
+#hernoem = 'rename variables ({0} = {1}).'.format(' '.join(numvarlijst), ' '.join(varlijst))
+#print hernoem
+#spss.Submit(hernoem)
+#spss.Submit('exe.')	
+
+#### toon foutelabellist als er iets in zit
+if len(foutelabellist) > 0:
+    print('Let op! Bestand bevat verkeerde labels. Gevolg van het precies op een spatie afbreken van lange labels door spss. Pas de labels handmatig aan van de variabelen in onderstaande lijst:')
+    print('{0}'.format(foutelabellist))
+end program.
