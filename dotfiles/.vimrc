@@ -19,10 +19,13 @@ Plugin 'VundleVim/Vundle.vim'
 " Add plugins here
 
 Plugin 'morhetz/gruvbox'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlp.vim'
+Plugin 'junegunn/fzf', {'do' : { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
@@ -61,6 +64,10 @@ let g:airline#extensions#tabline#enabled = 1
 nnoremap <silent> <F5> :!python3 %<CR>
 nnoremap <silent> <C-j> 10j
 nnoremap <silent> <C-k> 10k
+nnoremap <C-f> :GFiles<CR>
 
+" spss syntax [zorg dat spss.vim in de /.vim/syntax map staat]
+au BufNewFile,BufRead *.sps set filetype=spss
 
-
+set nofoldenable
+set diffopt+=context:99999
